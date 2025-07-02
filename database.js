@@ -4,13 +4,13 @@ const MongoClient = mongodb.MongoClient;
 let _db;
 
 const mongoConnect = (callback) => {
-  MongoClient.connect('mongodb://localhost:27017/Domino', {
+  MongoClient.connect('mongodb+srv://nishantbishnoi1200:Bishnoi%401200@cluster0.8mh1gzg.mongodb.net/Domino?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
     .then((client) => {
-      console.log('MongoDB Connected');
-      _db = client.db(); // default: 'pizzadb'
+      console.log('MongoDB Connected to Atlas 🎉');
+      _db = client.db(); // connects to Domino database
       callback();
     })
     .catch((err) => {
