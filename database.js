@@ -5,12 +5,13 @@ let _db;
 
 const mongoConnect = (callback) => {
   MongoClient.connect(
-    'mongodb+srv://nishantbishnoi1200:<YOUR_PASSWORD>@cluster0.8mh1gzg.mongodb.net/Domino?retryWrites=true&w=majority&appName=Cluster0',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  'mongodb+srv://nishantbishnoi1200:Bishnoi%401200@cluster0.8mh1gzg.mongodb.net/Domino?retryWrites=true&w=majority&appName=Cluster0',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+)
+
     .then((client) => {
       console.log('MongoDB Connected 🚀');
       _db = client.db(); // Use specific DB name if needed
